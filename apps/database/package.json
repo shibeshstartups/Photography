@@ -1,0 +1,30 @@
+{
+  "name": "@studio-erp/database",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Database schema and migrations for Studio ERP",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "migrate": "ts-node src/migrate.ts",
+    "generate": "drizzle-kit generate:sqlite",
+    "push": "drizzle-kit push:sqlite",
+    "studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.0",
+    "drizzle-orm": "^0.39.0",
+    "@studio-erp/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0",
+    "drizzle-kit": "^0.29.0",
+    "ts-node": "^10.9.0"
+  }
+}

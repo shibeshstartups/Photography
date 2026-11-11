@@ -1,0 +1,25 @@
+{
+  "name": "studio-erp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Photography production ERP — offline-first, sync-enabled, Cloudflare Workers + Electron",
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "format": "prettier --write .",
+    "clean": "turbo run clean && rm -rf node_modules .turbo"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.0",
+    "prettier": "^3.4.0",
+    "typescript": "^5.7.0",
+    "@types/node": "^22.10.0"
+  }
+}

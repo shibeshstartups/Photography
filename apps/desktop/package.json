@@ -1,0 +1,34 @@
+{
+  "name": "studio-erp-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Studio ERP — photography production management (Windows/macOS/Linux desktop)",
+  "main": "dist/main.js",
+  "author": "Studio ERP",
+  "license": "Proprietary",
+  "scripts": {
+    "dev": "electron .",
+    "build": "tsc -p tsconfig.json && electron-builder",
+    "make": "electron-builder --publish never",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "clean": "rm -rf dist build"
+  },
+  "dependencies": {
+    "@studio-erp/database": "workspace:*",
+    "@studio-erp/shared": "workspace:*",
+    "better-sqlite3": "^11.8.0",
+    "drizzle-orm": "^0.39.0",
+    "electron": "^33.0.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "electron-builder": "^25.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.7.0"
+  }
+}

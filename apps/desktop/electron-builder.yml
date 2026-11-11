@@ -1,0 +1,45 @@
+productName: StudioERP
+appId: com.studio.erp
+directories:
+  output: build
+  app: dist
+asar: true
+npmRebuild: false
+nodeVersion: 20.18.0
+files:
+  - dist/**/*
+  - node_modules/**/*
+  - package.json
+  - "**/*.db"
+  - "**/*.sqlite"
+extraResources:
+  - from: "./"
+    to: "."
+    filter:
+      - "**/*.db"
+win:
+  target:
+    - target: nsis
+      arch: x64
+  icon: assets/icon.ico
+  requestedExecutionLevel: asAdministrator
+  signing: null
+nsis:
+  allowToChangeInstallationDirectory: true
+  oneClick: false
+  perMachine: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Studio ERP
+  uninstallerName: StudioERPUninstall.exe
+mac:
+  target:
+    - target: dmg
+      arch: [x64, arm64]
+  icon: assets/icon.icns
+  category: public.app-category.productivity
+linux:
+  target:
+    - target: AppImage
+      arch: x64
+  icon: assets/icon.png
